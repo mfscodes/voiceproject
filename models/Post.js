@@ -7,7 +7,11 @@ const PostSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    require: true,
+    require: false,
+  },
+  audio:{
+    type:String,
+    require:false,
   },
   cloudinaryId: {
     type: String,

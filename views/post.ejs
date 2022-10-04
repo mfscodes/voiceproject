@@ -1,9 +1,11 @@
 <%- include('partials/header') -%>
+<audio class="audio-fluid" src="<%= post.audio%>" type="audio/mp3" </audio>
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= post.title %></h2>
       <img class="img-fluid" src="<%= post.image%>" />
+
       <div class="row justify-content-between">
         <form
           class="col-1"

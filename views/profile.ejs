@@ -22,20 +22,34 @@
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
+              <div class="mb-3">
+                <label for="audioUpload" class="form-label">Audio</label>
+                <input type="file" class="form-control" id="audioUpload" name="file">
+              </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
           </div>
       </div>
+
       <div class="col-6">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+              <image class="image-fluid" src="<%= posts[i].img%>">
             </a>
           </li>
         <% } %>
         </ul>
+        <ul class="row list-unstyled">
+          <% for(var i=0; i<posts.length; i++) {%>
+            <li class="col-6 justify-content-between mt-5">
+              <a href="/post/<%= posts[i]._id%>">
+                <audio class="audio-fluid" src="<%= posts[i].audio%>"type="audio/mpeg"</audio>
+              </a>
+            </li>
+          <% } %>
+          </ul>
         <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
         </div>  
